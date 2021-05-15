@@ -68,9 +68,9 @@
   function getKey(e) {
     // To-Do: Optimize the script
     for (let i = 0; i < keys.length; i++) {
-      console.log('Yay!');
       if (e.keyCode == keys[i].getAttribute('data-key')) {
         keys[i].classList.add('playing');
+        sounds[i].currentTime = 0;
         sounds[i].play();
       } else {
         keys[i].classList.remove('playing');
