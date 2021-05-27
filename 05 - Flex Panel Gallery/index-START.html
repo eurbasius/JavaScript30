@@ -63,7 +63,7 @@
       margin: 0;
       width: 100%;
       transition: transform 0.5s;
-      /* border: 1px solid red; */
+
       flex: 1 0 auto;
       display: flex;
       justify-content: center;
@@ -72,22 +72,22 @@
 
     .panel > *:first-child {
       transform: translateY(-100%);
-      border: 1px solid red;
+
      }
 
      .panel.open-active > *:first-child {
       transform: translateY(0);
-      border: 1px solid red;
+
      }
 
      .panel > *:last-child {
       transform: translateY(100%);
-      border: 1px solid red;
+
      }
 
      .panel.open-active > *:last-child {
       transform: translateY(0);
-      border: 1px solid red;
+
      }
 
     .panel p {
@@ -104,6 +104,7 @@
     .panel.open {
       flex: 5;
       font-size: 40px;
+      border: 1px solid yellow;
     }
 
   </style>
@@ -145,11 +146,10 @@
     }
 
     function toggleActive(e) {
-      console.log(e.propertyName);
+
       if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
       }
-      // this.classList.toggle('open-active');
     }
 
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
