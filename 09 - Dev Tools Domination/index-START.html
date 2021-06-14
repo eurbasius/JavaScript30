@@ -18,29 +18,46 @@
     }
 
     // Regular
-
+    console.log('Hello!');
     // Interpolated
 
     // Styled
+    console.log('%c I am something!', 'font-size: 50px; background: red;');
 
     // warning!
-
+    console.warn('Meh!');
     // Error :|
-
+    console.error('Oh!');
     // Info
-
+    console.info('Hey!');
     // Testing
-
+    console.assert(1 === 0, 'That is true!');
     // clearing
-
+    // console.clear();
     // Viewing DOM Elements
-
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
     // Grouping together
 
     // counting
-
+    console.count('Edvinas');
+    console.count('Edvinas');
+    console.count('Edvinas');
+    console.count('Edvinas');
+    console.count('Edvinas');
+    console.count('Ben');
+    console.count('Ben');
+    console.count('Ben');
+    console.count('Ben');
     // timing
-
+    console.time('Fetching data');
+    fetch('https://lrytas.lt')
+    .then(data => data.json())
+    .then(data => {
+      console.timeEnd('fetching data');
+      console.log(data);
+    })
   </script>
 </body>
 </html>
