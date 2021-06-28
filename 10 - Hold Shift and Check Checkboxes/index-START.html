@@ -98,28 +98,28 @@
 <script>
   // select all checkboxes
   const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
-  // initialize lastChecked value
+
   let lastChecked;
 
   function handleCheck(e) {
+
     let inBetween = false;
-    // Check if Shift down
+
     if (e.shiftKey && this.checked) {
       checkboxes.forEach(checkbox => {
-        console.log(checkbox);
         if (checkbox === this || checkbox === lastChecked) {
-        inBetween = !inBetween;
-        console.log("Starting to check!");
+          inBetween = !inBetween;
         }
+
         if (inBetween) {
           checkbox.checked = true;
         }
-      });
+      })
     }
-
-
+    
     lastChecked = this;
-  };
+  }
+
   // add event listener for each checkbox
   checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleCheck));
 </script>
