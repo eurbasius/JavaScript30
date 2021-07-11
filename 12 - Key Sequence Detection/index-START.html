@@ -7,6 +7,37 @@
 </head>
 <body>
 <script>
+  const pressed = [];
+  const konamiSequence = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightBA";
+  window.addEventListener("keyup", (e) => {
+    console.log(e.key);
+    switch(e.key) {
+      case "ArrowUp":
+        pressed.push(e.key)
+        break;
+      case "ArrowDown":
+        pressed.push(e.key)
+        break;
+      case "ArrowLeft":
+        pressed.push(e.key)
+        break;
+      case "ArrowRight":
+        pressed.push(e.key)
+        break;
+      case "A":
+        pressed.push(e.key)
+        break;
+      case "B":
+        pressed.push(e.key)
+        break;
+    default:
+      console.log('Try again!');
+    }
+
+    if (pressed.join("").includes(konamiSequence)) {
+      alert("https://en.wikipedia.org/wiki/Konami_Code!");
+    };
+  });
 </script>
 </body>
 </html>
